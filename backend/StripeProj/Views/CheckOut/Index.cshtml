@@ -1,0 +1,23 @@
+@model IEnumerable<ProductEntity>
+
+<br />
+
+<table class="table table-responsive table-light table-bordered " style="width: 100%;">
+  <tr>
+    <th>Product name</th>
+    <th>Rate </th>
+    <th>Quantity</th>
+    <th>Product Image</th>
+    <th>Total</th>
+  </tr>
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>@item.Product</td>
+      <td>@item.Rate</td>
+      <td>@item.Quantity</td>
+      <td>@item.ImagePath</td>
+      <td>@(iteem.Rate * item.ProdQuantityuct)</td>
+    </tr>
+  }
+</table>
